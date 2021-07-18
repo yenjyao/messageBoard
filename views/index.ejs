@@ -8,6 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index</h1>
+    <h1><%= title %></h1>
+    <ul>
+        <% Messages.forEach(item => { %>
+            <li>
+                <h3><%= item.text %></h3>
+                <p><%= item.user %></p>
+                <p><%= item.added %></p>
+            </li>
+            
+        <% }); %>
+    </ul>
 </body>
 </html>
